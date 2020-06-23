@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>animation</title>
+
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.box{width: 100px;height: 100px;background-color: aqua;
+			_animation-name: ani;animation-duration: 1s;
+			/*animation-fill-mode: forwards;*/animation-iteration-count: /*$*/infinite;
+			animation-direction: /*alternate*//*reverse*/alternate-reverse;
+			animation-delay: 1s;animation-timing-function: /*linear*/ease;
+			/*position: absolute;*/}
+		@keyframes ani{/*from{width: 100px;height: 100px;} to{width: 200px;height: 200px;}*/
+						0%{width: 100px;height: 100px;background-color: red;}
+						50%{width: 300px;height: 50px;background-color: yellow;/*left: 200px;*/}
+						100%{width: 500px;height: 10px;background-color: blue;/*left: 300px;*/}}
+
+		.boxWrap{width:300px;height: 300px;background-color: skyblue;position: relative;}
+
+		.line{width: 0;height: 10px;background-color: #00f;
+				/*animation-name: lineAni;*/animation-duration: 1s;animation-fill-mode: forwards;}
+		@keyframes lineAni{from{width: 0%;} to{width: 100%;}}
+
+		.line1{width: 10px;height: 0;background-color: lime;position: absolute;top: 0;
+				/*animation-name:lineAniOne;*/animation-duration: 1s;animation-fill-mode: forwards;}
+		@keyframes lineAniOne{from{height: 0;}to{height: 100%;}}
+
+		.line2{width: 0;height: 10px;background-color: darkgray;position: absolute;right: 0;
+				bottom: 0;animation-duration: 1s;animation-fill-mode: forwards;}
+		@keyframes lineAniTwo{from{width: 0%;}to{width: 100%;}}
+
+		.line3{width: 10px;height: 0;background-color: pink;position: absolute;right: 0;bottom: 0;
+				animation-duration: 1s;animation-fill-mode: forwards;}
+		@keyframes lineAniThr{from{height: 0;}to{height: 100%;}}
+
+		.boxWrap:hover .line{animation-name: lineAni;}
+		.boxWrap:hover .line1{animation-name: lineAniOne;}
+		.boxWrap:hover .line2{animation-name: lineAniTwo;}
+		.boxWrap:hover .line3{animation-name: lineAniThr;}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+
+	<div class="boxWrap">
+		<div class="line"></div>
+		<div class="line1"></div>
+		<div class="line2"></div>
+		<div class="line3"></div>
+	</div>
+</body>
+</html>
