@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+	<!-- header#main_header>h1#logo>{logo}^nav#util_menu>ul.clearfix>li*4>a[#]>{menu$}^^^^nav#main_menu>ul.clearfix>li*4>a[#]>{menu$} -->
+
+
+	<!-- header#main_header>(h1#logo>{logo})+(nav#util_menu>ul.clearfix>li*4>a[#]>{menu$})+(nav#main_menu>ul.clearfix>li*4>a[#]>{menu$}) -->
+
+
+	<header id="main_header">
+		<h1 id="logo">logo</h1>
+		<nav id="util_menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a>
+					<ul id="submenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">menu2</a>
+					<ul id="submenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">menu3</a>
+					<ul id="submenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+				<li><a href="#">menu4</a>
+					<ul id="submenu">
+						<li><a href="#">smenu1</a></li>
+						<li><a href="#">smenu2</a></li>
+						<li><a href="#">smenu3</a></li>
+						<li><a href="#">smenu4</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<nav id="main_menu">
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+
+	</header>
+	<div class="content clearfix">
+		<section id="main_section">
+			<article class="main_article">
+				<h2>Lorem ipsum.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat quod libero non. Ipsam vel voluptate, deserunt voluptatem ea, hic veniam iure, consequuntur neque cupiditate pariatur vitae odit qui perspiciatis eum?</p>
+			</article>
+			<article class="main_article">
+				<h2>Deserunt, ratione?</h2>
+				<p>Magni expedita, aliquam saepe itaque cumque ducimus et maxime. Quia autem explicabo architecto velit, tempora quaerat blanditiis maxime vitae, modi dicta fugiat, odit aspernatur provident consequatur eum. Nulla, doloremque eveniet.</p>
+			</article>
+			<article class="main_article">
+				<h2>Officia, facilis.</h2>
+				<p>Reprehenderit iure officia cumque explicabo dicta dolor, id molestiae assumenda quia non ipsum molestias iusto, animi impedit asperiores fuga recusandae corporis nobis architecto sit neque? Eius accusamus vitae expedita deserunt.</p>
+			</article>
+		</section>
+		<aside id="main_aside"></aside>
+	</div>
+	<footer id="main_footer">
+		<h3>Lorem ipsum.</h3>
+		<address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, consequatur.</address>
+	</footer>
+</body>
+</html>
