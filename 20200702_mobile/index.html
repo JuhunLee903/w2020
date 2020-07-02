@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>mobile</title>
+	<link rel="stylesheet" href="../css/reset.css">
+
+	<style>
+		table{width: 100%;border: 1px solid #000;border-collapse: collapse;}
+		td{border: 1px solid #000;height: 50px;text-align: center;width: 25%;
+		/*vertical-align:top middle bottom;*/}
+
+		.box{display: table;width: 100%;height: 100px;border: 1px solid #000;}
+		.box>li{display: table-cell;vertical-align: middle;text-align: center;
+			border-right: 1px solid #000;width: 20%;transition: 0.3s}
+		.box>li:nth-child(5){border-right: 0 none;}
+	</style>
+</head>
+<body>
+	
+	<table>
+		<tr>
+			<td>dddddddd</td>
+			<td>aaaaaaaaa</td>
+			<td>ccccccccc</td>
+			<td>eeeeeeeee</td>
+		</tr>
+	</table>
+
+	<ul class="box">
+		<li>text1</li>
+		<li>text2</li>
+		<li>text3</li>
+		<li>text4</li>
+		<li>text5</li>
+	</ul>
+</body>
+</html>
