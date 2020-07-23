@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>dom2</title>
+</head>
+<body>
+	Lorem ipsum dolor sit amet, <span class="text">consectetur adipisicing elit.</span> Reiciendis <span>tempore pariatur ipsum earum</span> aperiam cupiditate, recusandae, <span>quae debitis animi optio.</span>
+
+	<div onclick="change()">태그변경</div>
+	<div onclick="cChange()">클래스변경</div>
+	
+	<script>
+	function change(){
+		var span = document.getElementsByTagName("span");
+		console.log(span.length);
+		// span[0].style.color = "red";
+		for(var i=0;i<span.length;i++){
+			span[i].style.color="red";
+			span[i].style.fontWeight = "bold";
+			span[i].style.fontStyle = "italic";
+			span[i].style.fontSize = "1em";
+			span[i].style.background = "lightgray"
+		}
+	}
+	function cChange(){
+		var span = document.getElementsByClassName("text");
+		for(var i=0;i<span.length;i++){
+			span[i].style.color="orchid";
+			span[i].style.fontWeight = "bold";
+			span[i].style.fontSize = "2em";
+		}
+	}
+	// change();
+	</script>
+</body>
+</html>
