@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>pt</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+
+	
+	<style>
+		.boxWrap{width: 816px;height: 595px;margin: 0 auto;background: lightgray;}
+		.imgBox{width: 760px;height: 470px;margin: 0 auto;margin-bottom: 20px;}
+		.imgBox p{display: none;}
+		.thumbnail{width: 716px;height: 95px;margin: 0 auto;}
+		.thumbnail div{float: left;}
+		.thumbnail div.leftBt{margin-left: 15px;}
+		.thumbnail div.rightBt{margin-right: 15px;}
+		.thumbnail div.container{width: 660px;height: 95px;position: relative;
+			overflow: hidden;}
+		.thumbnail div.container ul{width: 1980px;position: absolute;left: 0;}
+		.thumbnail div.container ul li{float: left;width: 120px;height: 95px;margin-left: 10px;}
+		.mr10{margin-right: 10px !important;}
+
+	</style>
+
+	<script>
+		$(document).ready(function(){
+			$(".thumbnail li").click(function(){
+				var i = $(this).index();
+				$(".imgBox>p").hide().eq(i).show();
+			});
+
+			var current = 0;
+			$(".leftBt").click(function(){
+				current--;
+				if(current == -1){current=2};
+				imgMove();
+			});
+
+			$(".rightBt").click(function(){
+				current++;
+				if(current ==3){current=0};
+				imgMove();
+			});
+
+			function imgMove(){
+				var num = current * 660 *-1;
+				$(".container>ul").stop().animate({left:num},200)
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="boxWrap">
+		<div class="imgBox">
+			<p style="display: block";><img src="images/1.jpg" alt="" 1=""></p>
+			<p><img src="images/2.jpg" alt="" 2=""></p>
+			<p><img src="images/3.jpg" alt="" 3=""></p>
+			<p><img src="images/4.jpg" alt="" 4=""></p>
+			<p><img src="images/5.jpg" alt="" 5=""></p>
+			<p><img src="images/6.jpg" alt="" 6=""></p>
+			<p><img src="images/7.jpg" alt="" 7=""></p>
+			<p><img src="images/8.jpg" alt="" 8=""></p>
+			<p><img src="images/9.jpg" alt="" 9=""></p>
+			<p><img src="images/10.jpg" alt="" 10=""></p>
+			<p><img src="images/11.jpg" alt="" 11=""></p>
+			<p><img src="images/12.jpg" alt="" 12=""></p>
+			<p><img src="images/13.jpg" alt="" 13=""></p>
+			<p><img src="images/14.jpg" alt="" 14=""></p>
+			<p><img src="images/15.jpg" alt="" 15=""></p>
+		</div>
+		<div class="thumbnail clearfix">
+			<div class="leftBt"><img src="images/btn_left.gif" alt="left"></div>
+			<div class="container">
+				<ul class="clearfix">
+					<li><img src="images/thumb1.jpg" alt="" 1=""></li>
+					<li><img src="images/thumb2.jpg" alt="" 2=""></li>
+					<li><img src="images/thumb3.jpg" alt="" 3=""></li>
+					<li><img src="images/thumb4.jpg" alt="" 4=""></li>
+					<li class="mr10"><img src="images/thumb5.jpg" alt="" 5=""></li>
+					<li><img src="images/thumb6.jpg" alt="" 6=""></li>
+					<li><img src="images/thumb7.jpg" alt="" 7=""></li>
+					<li><img src="images/thumb8.jpg" alt="" 8=""></li>
+					<li><img src="images/thumb9.jpg" alt="" 9=""></li>
+					<li class="mr10"><img src="images/thumb10.jpg" alt="" 10=""></li>
+					<li><img src="images/thumb11.jpg" alt="" 11=""></li>
+					<li><img src="images/thumb12.jpg" alt="" 12=""></li>
+					<li><img src="images/thumb13.jpg" alt="" 13=""></li>
+					<li><img src="images/thumb14.jpg" alt="" 14=""></li>
+					<li class="mr10"><img src="images/thumb15.jpg" alt="" 15=""></li>
+				</ul>
+			</div>
+			<div class="rightBt"><img src="images/btn_right.gif" alt="right"></div>
+		</div>
+	</div>
+	
+</body>
+</html>
+			
+		
